@@ -7,6 +7,7 @@ import java.util.List;
 import com.kata.bank.account.Account;
 import com.kata.bank.exception.InsufficientBalanceException;
 
+
 /**
  * Implementation of customer account.
  * 
@@ -24,8 +25,10 @@ public class AccountImpl implements Account {
 
 	@Override
 	public void depositMoney(BigDecimal amount) throws IllegalArgumentException {
-		// TODO Auto-generated method stub
-		
+    	if ((amount == null) || (amount.compareTo(BigDecimal.ZERO) == -1)) {
+    		throw new IllegalArgumentException("The amount to deposit must be a positive number");
+    	}
+    	balance.add(amount); 
 	}
 
 	@Override
