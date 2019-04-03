@@ -1,6 +1,7 @@
 package com.kata.bank.account.impl;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,6 +30,7 @@ public class AccountImpl implements Account {
     		throw new IllegalArgumentException("The amount to deposit must be a positive number");
     	}
     	balance = balance.add(amount); 
+    	operationList.add(new Operation("+", LocalDateTime.now(), amount, balance));
 	}
 
 	@Override
@@ -40,6 +42,7 @@ public class AccountImpl implements Account {
     		throw new InsufficientBalanceException(balance, amount);
     	}
     	balance = balance.subtract(amount);
+    	operationList.add(new Operation("-", LocalDateTime.now(), amount, balance));
 	}
 
 	@Override
@@ -57,8 +60,7 @@ public class AccountImpl implements Account {
 
 	@Override
 	public List<Operation> getHistory() {
-		// TODO Auto-generated method stub
-		return null;
+		return operationList;
 	}
 
 	@Override
