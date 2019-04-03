@@ -24,7 +24,7 @@ public interface Account {
 	 * @param amount
 	 *            the money to withdraw
 	 */
-	public BigDecimal withdrawMoney(BigDecimal amount);
+	public void withdrawMoney(BigDecimal amount);
 
 	/**
 	 * Gets the account balance.

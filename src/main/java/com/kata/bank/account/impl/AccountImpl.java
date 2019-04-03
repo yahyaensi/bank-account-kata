@@ -28,9 +28,8 @@ public class AccountImpl implements Account {
 	}
 
 	@Override
-	public BigDecimal withdrawMoney(BigDecimal amount) {
+	public void withdrawMoney(BigDecimal amount) {
 		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Override
