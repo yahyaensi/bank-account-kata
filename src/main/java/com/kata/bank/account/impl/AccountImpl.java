@@ -21,6 +21,9 @@ public class AccountImpl implements Account {
 	 */
 	private BigDecimal balance = BigDecimal.ZERO;
 
+	/**
+	 * Operations history holder.
+	 */
 	private List<Operation> operationList = new ArrayList<>();
 
 	@Override
