@@ -1,6 +1,9 @@
 package com.kata.bank.account;
 
 import java.math.BigDecimal;
+import java.util.List;
+
+import com.kata.bank.account.impl.Operation;
 
 /**
  * Customer account contract.
@@ -42,8 +45,8 @@ public interface Account {
     boolean hasSufficientBalance(BigDecimal amount);
     
     /**
-     * 
+     * Returns account operations history.
      */
-    void showHistory();
+    List<Operation> getHistory();
 
 }

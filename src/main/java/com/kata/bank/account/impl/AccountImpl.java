@@ -45,9 +45,9 @@ public class AccountImpl implements Account {
 	}
 
 	@Override
-	public void showHistory() {
+	public List<Operation> getHistory() {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
 
 }
