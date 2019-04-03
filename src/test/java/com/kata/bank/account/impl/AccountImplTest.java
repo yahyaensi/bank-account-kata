@@ -125,9 +125,9 @@ public class AccountImplTest {
 		customerAccount.withdrawMoney(new BigDecimal("20"));
 		assertEquals("The saved withdrawal operation type must be a -", "-",
 				customerAccount.getHistory().get(1).getType());
-		assertEquals("The saved withdrawal operation amount must be a 0.66", new BigDecimal("20.66"),
+		assertEquals("The saved withdrawal operation amount must be a 20", new BigDecimal("20"),
 				customerAccount.getHistory().get(1).getAmount());
-		assertEquals("The saved withdrawal operation balance must be a 20.66", new BigDecimal("0.66"),
+		assertEquals("The saved withdrawal operation balance must be a 0.66", new BigDecimal("0.66"),
 				customerAccount.getHistory().get(1).getBalance());
 	}
 
