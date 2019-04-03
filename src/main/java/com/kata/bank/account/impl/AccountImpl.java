@@ -28,24 +28,31 @@ public class AccountImpl implements Account {
     	if ((amount == null) || (amount.compareTo(BigDecimal.ZERO) == -1)) {
     		throw new IllegalArgumentException("The amount to deposit must be a positive number");
     	}
-    	balance.add(amount); 
+    	balance = balance.add(amount); 
 	}
 
 	@Override
 	public void withdrawMoney(BigDecimal amount) throws InsufficientBalanceException, IllegalArgumentException {
-		// TODO Auto-generated method stub
+    	if ((amount == null) || (amount.compareTo(BigDecimal.ZERO) == -1)) {
+    		throw new IllegalArgumentException("The amount to withdraw must be a positive number");
+    	}
+    	if (!hasSufficientBalance(amount)) {
+    		throw new InsufficientBalanceException(balance, amount);
+    	}
+    	balance = balance.subtract(amount);
 	}
 
 	@Override
 	public BigDecimal getBalance() {
-		// TODO Auto-generated method stub
-		return null;
+		return balance;
 	}
 
 	@Override
 	public boolean hasSufficientBalance(BigDecimal amount) {
-		// TODO Auto-generated method stub
-		return false;
+    	if (balance.compareTo(amount) == -1) {
+    		return false;
+    	}
+    	return true;
 	}
 
 	@Override
