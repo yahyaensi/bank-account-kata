@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 import com.kata.bank.account.impl.Operation;
+import com.kata.bank.exception.InsufficientBalanceException;
 
 /**
  * Customer account contract.
@@ -19,7 +20,7 @@ public interface Account {
 	 * @param amount
 	 *            the money to add
 	 */
-	public void depositMoney(BigDecimal amount);
+	public void depositMoney(BigDecimal amount) throws IllegalArgumentException;
 
 	/**
 	 * Withdraws money from the account.
@@ -27,7 +28,7 @@ public interface Account {
 	 * @param amount
 	 *            the money to withdraw
 	 */
-	public void withdrawMoney(BigDecimal amount);
+	public void withdrawMoney(BigDecimal amount) throws InsufficientBalanceException, IllegalArgumentException;
 
 	/**
 	 * Gets the account balance.
@@ -48,5 +49,10 @@ public interface Account {
      * Returns account operations history.
      */
     List<Operation> getHistory();
+    
+    /**
+     * Shows account operations history.
+     */
+    void showHistory();
 
 }

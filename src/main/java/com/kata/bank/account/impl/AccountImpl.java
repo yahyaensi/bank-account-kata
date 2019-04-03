@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.kata.bank.account.Account;
+import com.kata.bank.exception.InsufficientBalanceException;
 
 /**
  * Implementation of customer account.
@@ -22,13 +23,13 @@ public class AccountImpl implements Account {
 	private List<Operation> operationList = new ArrayList<>();
 
 	@Override
-	public void depositMoney(BigDecimal amount) {
+	public void depositMoney(BigDecimal amount) throws IllegalArgumentException {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void withdrawMoney(BigDecimal amount) {
+	public void withdrawMoney(BigDecimal amount) throws InsufficientBalanceException, IllegalArgumentException {
 		// TODO Auto-generated method stub
 	}
 
@@ -48,6 +49,12 @@ public class AccountImpl implements Account {
 	public List<Operation> getHistory() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public void showHistory() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
