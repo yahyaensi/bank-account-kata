@@ -14,7 +14,7 @@ public class Operation {
 	/**
 	 * Either 'deposit(+)' or 'withdrawal (-)'
 	 */
-	private String operation;
+	private String type;
 	
 	/**
 	 * Operation date.
@@ -32,17 +32,17 @@ public class Operation {
 	private BigDecimal balance;
 
 	/**
-	 * @return the operation
+	 * @return the operation type
 	 */
-	public String getOperation() {
-		return operation;
+	public String getType() {
+		return type;
 	}
 
 	/**
-	 * @param operation the operation to set
+	 * @param type the operation type to set
 	 */
-	public void setOperation(String operation) {
-		this.operation = operation;
+	public void setOperation(String type) {
+		this.type = type;
 	}
 
 	/**
