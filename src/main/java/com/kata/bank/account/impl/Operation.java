@@ -106,7 +106,9 @@ public class Operation {
 		this.balance = balance;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
@@ -114,5 +116,4 @@ public class Operation {
 		return type + ", " + dateTime + ", " + amount + ", " + balance;
 	}
 
-	
 }

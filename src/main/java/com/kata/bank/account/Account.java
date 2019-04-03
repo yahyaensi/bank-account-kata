@@ -36,23 +36,23 @@ public interface Account {
 	 * @return the account's balance
 	 */
 	public BigDecimal getBalance();
-	
-    /**
-     * Checks if the account has a sufficient balance
-     * 
+
+	/**
+	 * Checks if the account has a sufficient balance
+	 * 
 	 * @param amount
 	 *            the money to withdraw
-     */
-    boolean hasSufficientBalance(BigDecimal amount);
-    
-    /**
-     * Returns account operations history.
-     */
-    List<Operation> getHistory();
-    
-    /**
-     * Shows account operations history.
-     */
-    void showHistory();
+	 */
+	boolean hasSufficientBalance(BigDecimal amount);
+
+	/**
+	 * Returns account operations history.
+	 */
+	List<Operation> getHistory();
+
+	/**
+	 * Shows account operations history.
+	 */
+	void showHistory();
 
 }

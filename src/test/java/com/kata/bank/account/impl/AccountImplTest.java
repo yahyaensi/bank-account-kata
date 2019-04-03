@@ -145,13 +145,12 @@ public class AccountImplTest {
 			assertEquals("The saved withdrawal operation is not saved", 1, customerAccount.getHistory().size());
 		}
 	}
-	
-	
+
 	/**
 	 * Tests show history.
 	 * 
-	 * @throws InsufficientBalanceException 
-	 * @throws InterruptedException 
+	 * @throws InsufficientBalanceException
+	 * @throws InterruptedException
 	 */
 	@Test
 	public void testShowHistory() throws InsufficientBalanceException, InterruptedException {
