@@ -151,10 +151,12 @@ public class AccountImplTest {
 	 * Tests show history.
 	 * 
 	 * @throws InsufficientBalanceException 
+	 * @throws InterruptedException 
 	 */
 	@Test
-	public void testShowHistory() throws InsufficientBalanceException {
+	public void testShowHistory() throws InsufficientBalanceException, InterruptedException {
 		customerAccount.depositMoney(new BigDecimal("30.658"));
+		Thread.sleep(2000);
 		customerAccount.withdrawMoney(new BigDecimal("20.44"));
 		customerAccount.showHistory();
 	}
