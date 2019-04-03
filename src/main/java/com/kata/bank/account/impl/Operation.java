@@ -106,4 +106,13 @@ public class Operation {
 		this.balance = balance;
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return type + ", " + dateTime + ", " + amount + ", " + balance;
+	}
+
+	
 }

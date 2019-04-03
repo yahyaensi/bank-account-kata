@@ -65,7 +65,7 @@ public class AccountImpl implements Account {
 
 	@Override
 	public void showHistory() {
-		// TODO Auto-generated method stub
+		operationList.forEach(System.out::println);
 		
 	}
 
